@@ -1,0 +1,373 @@
+<html>
+
+<head>
+    <title>
+        Data Divisi
+    </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: #f8f9fa;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar img {
+            width: 50px;
+            border-radius: 50%;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .sidebar p {
+            text-align: center;
+            color: #888;
+            font-size: 14px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px 20px;
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .sidebar a i {
+            margin-right: 10px;
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .content-header h2 {
+            margin: 0;
+        }
+
+        .content-header button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .table-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th,
+        table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #f8f9fa;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .table-actions {
+            display: flex;
+            justify-content: center;
+        }
+
+        .table-actions a {
+            margin: 0 5px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .table-actions a:hover {
+            color: #0056b3;
+        }
+
+        .table-actions a.delete {
+            color: #dc3545;
+        }
+
+        .table-actions a.delete:hover {
+            color: #c82333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <img alt="User profile picture" height="50" src="farid.jpg" width="50" />
+        <h2>
+            Welcome,Farid rivai
+        </h2>
+        <p>
+            Administrator
+        </p>
+        <a href="index.html">
+            <i class="fas fa-home">
+            </i>
+            Dashboard
+        </a>
+        <a href="karyawan.html">
+            <i class="fas fa-users">
+            </i>
+            Karyawan
+        </a>
+        <a href="jabatan.html">
+            <i class="fas fa-briefcase">
+            </i>
+            Jabatan
+        </a>
+        <a class="active" href="#">
+            <i class="fas fa-building">
+            </i>
+            Divisi
+        </a>
+        <a href="absensi.html">
+            <i class="fas fa-calendar-check">
+            </i>
+            Absensi
+        </a>
+        <a href="izin.html">
+            <i class="fas fa-calendar-times">
+            </i>
+            Izin
+        </a>
+        <a href="lembur.html">
+            <i class="fas fa-clock">
+            </i>
+            Lembur
+        </a>
+    </div>
+    <div class="content">
+        <div class="content-header">
+            <h2>
+                Data Divisi
+            </h2>
+            <div class="content">
+                <a href="tambah divisi.html">
+                    <button>
+                        + Tambah Divisi
+                    </button>
+            </a></div> 
+        </div>
+        <div class="table-container">
+            <div class="table-controls">
+                <label>
+                    Show
+                    <select>
+                        <option value="10">
+                            10
+                        </option>
+                        <option value="25">
+                            25
+                        </option>
+                        <option value="50">
+                            50
+                        </option>
+                        <option value="100">
+                            100
+                        </option>
+                    </select>
+                    entries
+                </label>
+                <label style="float: right;">
+                    Search:
+                    <input type="text" />
+                </label>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            No
+                        </th>
+                        <th>
+                            Kode Divisi
+                        </th>
+                        <th>
+                            Nama Divisi
+                        </th>
+                        <th>
+                            Aksi
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            DIV001
+                        </td>
+                        <td>
+                            Umum
+                        </td>
+                        <td class="table-actions">
+                            <a href="#">
+                                <i class="fas fa-edit">
+                                </i>
+                            </a>
+                            <a class="delete" href="#">
+                                <i class="fas fa-times">
+                                </i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            DIV002
+                        </td>
+                        <td>
+                            BAUK
+                        </td>
+                        <td class="table-actions">
+                            <a href="#">
+                                <i class="fas fa-edit">
+                                </i>
+                            </a>
+                            <a class="delete" href="#">
+                                <i class="fas fa-times">
+                                </i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            DIV003
+                        </td>
+                        <td>
+                            BAA
+                        </td>
+                        <td class="table-actions">
+                            <a href="#">
+                                <i class="fas fa-edit">
+                                </i>
+                            </a>
+                            <a class="delete" href="#">
+                                <i class="fas fa-times">
+                                </i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4
+                        </td>
+                        <td>
+                            DIV004
+                        </td>
+                        <td>
+                            IT
+                        </td>
+                        <td class="table-actions">
+                            <a href="#">
+                                <i class="fas fa-edit">
+                                </i>
+                            </a>
+                            <a class="delete" href="#">
+                                <i class="fas fa-times">
+                                </i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                            DIV005
+                        </td>
+                        <td>
+                            Cleaning Service
+                        </td>
+                        <td class="table-actions">
+                            <a href="#">
+                                <i class="fas fa-edit">
+                                </i>
+                            </a>
+                            <a class="delete" href="#">
+                                <i class="fas fa-times">
+                                </i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            6
+                        </td>
+                        <td>
+                            DIV006
+                        </td>
+                        <td>
+                            OB
+                        </td>
+                        <td class="table-actions">
+                            <a href="#">
+                                <i class="fas fa-edit">
+                                </i>
+                            </a>
+                            <a class="delete" href="#">
+                                <i class="fas fa-times">
+                                </i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
