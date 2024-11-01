@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemberitahuan Bar</title>
+    <style>
+        /* Gaya untuk overlay latar belakang */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Warna background dengan opacity */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        /* Gaya untuk notification bar */
+        .notification-bar {
+            background-color: #333; /* Warna background bar */
+            color: white; /* Warna teks */
+            padding: 20px;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        /* Gaya untuk tombol tutup */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Notification Bar -->
+<div class="overlay" id="notification">
+    <div class="notification-bar">
+        <button class="close-btn" onclick="closeNotification()" a href="data divisi.html">×</button>
+        penambahan divisi sedang tidak tersida loker!
+    </div>
+</div>
+
+<script>
+    // Fungsi untuk menutup notification bar
+    function closeNotification() {
+        document.getElementById('notification').style.display = 'none';
+        window.location.href = 'data divisi.html';
+    }
+</script>
+
+</body>
+</html>

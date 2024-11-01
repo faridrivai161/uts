@@ -1,0 +1,294 @@
+<html>
+ <head>
+  <title>
+   Tambah Data Karyawan
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: #343a40;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 20px;
+        }
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 15px;
+            text-align: left;
+            padding-left: 30px;
+        }
+        .sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+        }
+        .sidebar ul li a:hover {
+            background-color: #495057;
+        }
+        .sidebar .logout {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        .sidebar .logout a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            background-color: #007bff;
+            border-radius: 5px;
+        }
+        .sidebar .logout a:hover {
+            background-color: #0056b3;
+        }
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+        .main-content .header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .main-content .header h1 {
+            margin: 0;
+        }
+        .main-content .header .user-info {
+            display: flex;
+            align-items: center;
+        }
+        .main-content .header .user-info img {
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+        .main-content .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .main-content .content h2 {
+            margin-top: 0;
+        }
+        .main-content .content form {
+            display: flex;
+            flex-direction: column;
+        }
+        .main-content .content form .form-group {
+            margin-bottom: 15px;
+        }
+        .main-content .content form .form-group label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .main-content .content form .form-group input,
+        .main-content .content form .form-group select,
+        .main-content .content form .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+        }
+        .main-content .content form .form-group textarea {
+            resize: vertical;
+        }
+        .main-content .content form .form-actions {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .main-content .content form .form-actions button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .main-content .content form .form-actions .btn-save {
+            background-color: #28a745;
+            color: #fff;
+            margin-right: 10px;
+        }
+        .main-content .content form .form-actions .btn-cancel {
+            background-color: #dc3545;
+            color: #fff;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="sidebar">
+   <h2>
+    Universitas Buing Karno
+   </h2>
+   <ul>
+    <li>
+     <a href="#">
+      Dashboard
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      Karyawan
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      Jabatan
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      Divisi
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      Absensi
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      Izin
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      Lembur
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      Slip Gaji
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      Cetak Slip Gaji
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      Catat Laporan
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      Pengguna
+     </a>
+    </li>
+   </ul>
+   <div class="logout">
+    <a href="#">
+     Logout
+    </a>
+   </div>
+  </div>
+  <div class="main-content">
+   <div class="header">
+    <h1>
+     Forms
+    </h1>
+    <div class="user-info">
+     <span>
+      Welcome, Yayan Fiqri
+     </span>
+     <img alt="User profile picture" height="40" src="https://storage.googleapis.com/a1aa/image/w1fN77Yu300hEioRp7I1Zv7CufBExqLCv92Km0OHbTSA8hsTA.jpg" width="40"/>
+    </div>
+   </div>
+   <div class="content">
+    <h2>
+     Tambah Data Karyawan
+    </h2>
+    <form>
+     <div class="form-group">
+      <label for="nama">
+       Nama Lengkap
+      </label>
+      <input id="nama" name="nama" type="text"/>
+     </div>
+     <div class="form-group">
+      <label for="jenis-kelamin">
+       Jenis Kelamin
+      </label>
+      <select id="jenis-kelamin" name="jenis-kelamin">
+       <option value="">
+        --
+       </option>
+      </select>
+     </div>
+     <div class="form-group">
+      <label for="email">
+       Email
+      </label>
+      <input id="email" name="email" type="email"/>
+     </div>
+     <div class="form-group">
+      <label for="no-hp">
+       No HP
+      </label>
+      <input id="no-hp" name="no-hp" type="text"/>
+     </div>
+     <div class="form-group">
+      <label for="alamat">
+       Alamat
+      </label>
+      <textarea id="alamat" name="alamat" rows="4"></textarea>
+     </div>
+     <div class="form-group">
+      <label for="password">
+       Password
+      </label>
+      <input id="password" name="password" type="password"/>
+     </div>
+     <div class="form-group">
+      <label for="jabatan">
+       Jabatan
+      </label>
+      <select id="jabatan" name="jabatan">
+       <option value="">
+        --
+       </option>
+      </select>
+     </div>
+     <div class="form-group">
+      <label for="divisi">
+       Divisi
+      </label>
+      <select id="divisi" name="divisi">
+       <option value="">
+        --
+       </option>
+      </select>
+     </div>
+     <div class="form-actions">
+      <button class="btn-save" type="submit">
+       Simpan
+      </button>
+      <button class="btn-cancel" type="button">
+       Batal
+      </button>
+     </div>
+    </form>
+   </div>
+  </div>
+ </body>
+</html>
